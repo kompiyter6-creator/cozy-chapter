@@ -41,6 +41,10 @@ text-align:center;
 h1{
 font-size:54px;
 margin-bottom:15px;
+}
+
+h2{
+margin-bottom:25px;
 color:#4b352a;
 }
 
@@ -52,15 +56,39 @@ padding:60px 8%;
 background:white;
 padding:35px;
 border-radius:25px;
-margin-bottom:25px;
+margin-bottom:35px;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.box img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+margin-bottom:25px;
 }
 
 .menu-item{
 display:flex;
 justify-content:space-between;
-padding:12px 0;
+padding:14px 0;
 border-bottom:1px solid #eee;
+gap:15px;
+}
+
+.name{
+font-weight:bold;
+}
+
+.desc{
+font-size:14px;
+opacity:.8;
+margin-top:5px;
+}
+
+.price{
+font-weight:bold;
+white-space:nowrap;
 }
 
 footer{
@@ -77,9 +105,14 @@ h1{
 font-size:38px;
 }
 
+.menu-item{
+flex-direction:column;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
@@ -96,9 +129,10 @@ font-size:38px;
 
 <h1>Меню Cozy Chapter</h1>
 
-<p>Кофе, десерты и блюда для уютных вечеров</p>
+<p>Еда и напитки для уютных историй</p>
 
 </header>
+
 
 <section>
 
@@ -106,46 +140,283 @@ font-size:38px;
 
 <h2>☕ Кофе</h2>
 
+<img src="menu-coffee.jpg">
+
 <div class="menu-item">
-<span>Капучино</span>
-<span>250₽</span>
+<div>
+<div class="name">Американо</div>
+<div class="desc">эспрессо + горячая вода</div>
+</div>
+<div class="price">180₽</div>
 </div>
 
 <div class="menu-item">
-<span>Латте</span>
-<span>290₽</span>
+<div>
+<div class="name">Латте</div>
+<div class="desc">эспрессо, молоко</div>
+</div>
+<div class="price">250₽</div>
 </div>
 
 <div class="menu-item">
-<span>Американо</span>
+<div>
+<div class="name">Капучино</div>
+<div class="desc">эспрессо, молоко, пенка</div>
+</div>
+<div class="price">240₽</div>
+</div>
+
+<div class="menu-item">
+<div>
+<div class="name">Раф</div>
+<div class="desc">сливки, эспрессо, ваниль</div>
+</div>
+<div class="price">320₽</div>
+</div>
+
+<div class="menu-item">
+<div>
+<div class="name">Флет-уайт</div>
+<div class="desc">двойной эспрессо и молоко</div>
+</div>
+<div class="price">260₽</div>
+</div>
+
+<div class="menu-item">
+<div>
+<div class="name">Матча латте</div>
+</div>
+<div class="price">290₽</div>
+</div>
+
+<div class="menu-item">
+<div>
+<div class="name">Матча на кокосовом</div>
+</div>
+<div class="price">330₽</div>
+</div>
+
+<div class="menu-item">
+<div>
+<div class="name">Эспрессо-тоник</div>
+</div>
+<div class="price">290₽</div>
+</div>
+
+</div>
+
+
+
+<div class="box">
+
+<h2>✨ Добавки и кастомизация</h2>
+
+<div class="menu-item">
+<span>альтернативное молоко</span>
+<span>+80₽</span>
+</div>
+
+<div class="menu-item">
+<span>доп. шот эспрессо</span>
+<span>+70₽</span>
+</div>
+
+<div class="menu-item">
+<span>ванильный сироп</span>
+<span>+40₽</span>
+</div>
+
+<div class="menu-item">
+<span>солёная карамель</span>
+<span>+40₽</span>
+</div>
+
+<div class="menu-item">
+<span>кокос</span>
+<span>+40₽</span>
+</div>
+
+<div class="menu-item">
+<span>лаванда</span>
+<span>+40₽</span>
+</div>
+
+</div>
+
+
+
+<div class="box">
+
+<h2>🍵 Чай</h2>
+
+<div class="menu-item">
+<span>чёрный чай</span>
 <span>220₽</span>
 </div>
 
 <div class="menu-item">
-<span>Раф</span>
-<span>320₽</span>
+<span>зелёный чай</span>
+<span>220₽</span>
+</div>
+
+<div class="menu-item">
+<span>с бергамотом</span>
+<span>240₽</span>
+</div>
+
+<div class="menu-item">
+<span>малина + имбирь</span>
+<span>270₽</span>
+</div>
+
+<div class="menu-item">
+<span>облепиха + апельсин</span>
+<span>280₽</span>
+</div>
+
+<div class="menu-item">
+<span>лаванда + черника</span>
+<span>280₽</span>
+</div>
+
+<div class="menu-item">
+<span>лесные ягоды</span>
+<span>260₽</span>
 </div>
 
 </div>
+
+
+
+
+<div class="box">
+
+<h2>🍋 Летние напитки</h2>
+
+<div class="menu-item">
+<span>клубника + базилик</span>
+<span>290₽</span>
+</div>
+
+<div class="menu-item">
+<span>лимон + мята</span>
+<span>270₽</span>
+</div>
+
+<div class="menu-item">
+<span>арбузный лимонад</span>
+<span>320₽</span>
+</div>
+
+<div class="menu-item">
+<span>манго + маракуйя</span>
+<span>330₽</span>
+</div>
+
+</div>
+
 
 
 <div class="box">
 
 <h2>🍰 Десерты</h2>
 
+<img src="menu-desserts.jpg">
+
 <div class="menu-item">
-<span>Чизкейк</span>
-<span>290₽</span>
+<div>
+<div class="name">Наполеон</div>
+<div class="desc">слоёный торт с кремом</div>
+</div>
+<div class="price">240₽</div>
 </div>
 
 <div class="menu-item">
-<span>Круассан</span>
-<span>170₽</span>
+<div>
+<div class="name">Медовик</div>
+</div>
+<div class="price">240₽</div>
 </div>
 
 <div class="menu-item">
-<span>Шоколадный торт</span>
-<span>320₽</span>
+<div>
+<div class="name">Прага</div>
+</div>
+<div class="price">260₽</div>
+</div>
+
+<div class="menu-item">
+<div>
+<div class="name">Картошка</div>
+</div>
+<div class="price">120₽</div>
+</div>
+
+<div class="menu-item">
+<div>
+<div class="name">Макаруны</div>
+</div>
+<div class="price">110₽/шт</div>
+</div>
+
+<div class="menu-item">
+<div>
+<div class="name">Круассаны</div>
+<div class="desc">шоколад, малина, миндаль</div>
+</div>
+<div class="price">180₽</div>
+</div>
+
+</div>
+
+
+
+<div class="box">
+
+<h2>🥪 Горячее</h2>
+
+<img src="menu-food.jpg">
+
+<div class="menu-item">
+<div>
+<div class="name">Круассан с ветчиной и сыром</div>
+</div>
+<div class="price">320₽</div>
+</div>
+
+<div class="menu-item">
+<div>
+<div class="name">Круассан с курицей</div>
+</div>
+<div class="price">340₽</div>
+</div>
+
+<div class="menu-item">
+<div>
+<div class="name">Тост с авокадо и яйцом</div>
+</div>
+<div class="price">320₽</div>
+</div>
+
+<div class="menu-item">
+<div>
+<div class="name">Тост с лососем</div>
+</div>
+<div class="price">380₽</div>
+</div>
+
+<div class="menu-item">
+<div>
+<div class="name">Канапе ассорти</div>
+</div>
+<div class="price">260₽</div>
+</div>
+
+<div class="menu-item">
+<div>
+<div class="name">Крем-суп</div>
+</div>
+<div class="price">340₽</div>
 </div>
 
 </div>
@@ -153,32 +424,11 @@ font-size:38px;
 
 <div class="box">
 
-<h2>🍝 Полноценные блюда</h2>
-
-<div class="menu-item">
-<span>Паста</span>
-<span>470₽</span>
-</div>
-
-<div class="menu-item">
-<span>Крем-суп</span>
-<span>350₽</span>
-</div>
-
-<div class="menu-item">
-<span>Сэндвич с курицей</span>
-<span>390₽</span>
-</div>
-
-</div>
-
-<div class="box">
-
-<h2>Правила бронирования</h2>
+<h2>🥡 Формат «с собой»</h2>
 
 <p>
 
-При заказе любой позиции меню одно место предоставляется бесплатно на 2 часа.
+Все напитки и десерты можно взять с собой.
 
 </p>
 
@@ -186,15 +436,7 @@ font-size:38px;
 
 <p>
 
-Для больших компаний доступны отдельные комнаты по бронированию.
-
-</p>
-
-<br>
-
-<p>
-
-Для книжного клуба зал предоставляется бесплатно.
+Скидка 10% на напитки и десерты навынос.
 
 </p>
 
@@ -202,9 +444,10 @@ font-size:38px;
 
 </section>
 
+
 <footer>
 
-© 2026 Cozy Chapter
+© 2025 Cozy Chapter
 
 </footer>
 
