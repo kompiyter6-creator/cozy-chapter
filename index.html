@@ -4,30 +4,198 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cozy Chapter</title>
+
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:Arial,sans-serif;background:#fff8f0;color:#3b2a22;line-height:1.6}
-    nav{position:fixed;top:0;width:100%;background:rgba(75,53,42,.9);padding:15px 8%;z-index:10}
-    nav a{color:white;text-decoration:none;margin-right:20px;font-weight:bold}
-    header{min-height:100vh;background:linear-gradient(rgba(45,28,18,.55),rgba(45,28,18,.7)),url("hero.jpg") center/cover no-repeat;color:white;display:flex;align-items:center;padding:90px 8% 40px}
-    .hero{max-width:650px}
-    h1{font-size:64px;margin-bottom:20px}
-    h2{font-size:36px;margin-bottom:25px;color:#4b352a}
-    .hero p{font-size:24px;margin-bottom:30px}
-    .btn{display:inline-block;background:#d4a373;color:#2f1f18;padding:14px 26px;border-radius:30px;text-decoration:none;font-weight:bold;margin:6px}
-    section{padding:70px 8%}
-    .box{background:#f5e6ca;border-radius:28px;padding:35px}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
-    .card{background:white;border-radius:22px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.12)}
-    .card img{width:100%;height:250px;object-fit:cover}
-    .card div{padding:24px}
-    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .review{background:white;padding:25px;border-radius:22px;box-shadow:0 8px 22px rgba(0,0,0,.1)}
-    .contacts a{display:inline-block;background:#6f4e37;color:white;padding:12px 20px;border-radius:25px;text-decoration:none;margin:8px}
-    footer{background:#4b352a;color:white;text-align:center;padding:25px}
-    @media(max-width:800px){h1{font-size:42px}.cards,.reviews{grid-template-columns:1fr}nav a{display:inline-block;margin:5px}}
+
+    body{
+      font-family:Arial,sans-serif;
+      background:#fff8f0;
+      color:#3b2a22;
+      line-height:1.6;
+    }
+
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(75,53,42,.94);
+      padding:15px 8%;
+      z-index:10;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-right:22px;
+      font-weight:bold;
+    }
+
+    header{
+      min-height:100vh;
+      background:
+      linear-gradient(rgba(45,28,18,.55),rgba(45,28,18,.72)),
+      url("hero.jpg") center/cover no-repeat;
+      color:white;
+      display:flex;
+      align-items:center;
+      padding:100px 8% 50px;
+    }
+
+    .hero{
+      max-width:720px;
+    }
+
+    h1{
+      font-size:68px;
+      margin-bottom:20px;
+    }
+
+    h2{
+      font-size:36px;
+      margin-bottom:25px;
+      color:#4b352a;
+    }
+
+    h3{
+      color:#6f4e37;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      font-size:24px;
+      margin-bottom:28px;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#d4a373;
+      color:#2f1f18;
+      padding:14px 26px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+      margin:6px 8px 6px 0;
+    }
+
+    section{
+      padding:70px 8%;
+    }
+
+    .box{
+      background:#f5e6ca;
+      border-radius:30px;
+      padding:40px;
+    }
+
+    .white-box{
+      background:white;
+      border-radius:30px;
+      padding:40px;
+      box-shadow:0 10px 28px rgba(0,0,0,.08);
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
+    }
+
+    .two-cards{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,.12);
+    }
+
+    .card img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+    }
+
+    .card div{
+      padding:24px;
+    }
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:25px;
+    }
+
+    .feature{
+      background:white;
+      padding:22px;
+      border-radius:22px;
+      text-align:center;
+      box-shadow:0 8px 22px rgba(0,0,0,.08);
+    }
+
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .review{
+      background:white;
+      padding:25px;
+      border-radius:22px;
+      box-shadow:0 8px 22px rgba(0,0,0,.1);
+    }
+
+    .big-image{
+      width:100%;
+      border-radius:24px;
+      margin:25px 0;
+      box-shadow:0 10px 30px rgba(0,0,0,.15);
+    }
+
+    ul{
+      margin-left:22px;
+      margin-top:12px;
+    }
+
+    .contacts a{
+      display:inline-block;
+      background:#6f4e37;
+      color:white;
+      padding:12px 20px;
+      border-radius:25px;
+      text-decoration:none;
+      margin:8px;
+    }
+
+    footer{
+      background:#4b352a;
+      color:white;
+      text-align:center;
+      padding:25px;
+    }
+
+    @media(max-width:900px){
+      h1{font-size:42px}
+      h2{font-size:30px}
+      .hero p{font-size:19px}
+      .cards,.two-cards,.features,.reviews{
+        grid-template-columns:1fr;
+      }
+      nav a{
+        display:inline-block;
+        margin:5px 10px 5px 0;
+      }
+    }
   </style>
 </head>
+
 <body>
 
 <nav>
@@ -42,56 +210,187 @@
     <p>Книжная кофейня, где кофе встречается с историями.</p>
     <a href="club.html" class="btn">Книжный клуб</a>
     <a href="menu.html" class="btn">Посмотреть меню</a>
+    <a href="#booking" class="btn">Забронировать место</a>
   </div>
 </header>
 
 <section class="box">
   <h2>О нашем кафе</h2>
-  <p>Cozy Chapter — это место для чтения, отдыха, встреч с друзьями и книжных обсуждений. У нас есть мягкие кресла, гамаки, подвесные качели, розетки, Wi-Fi, десерты, напитки и полноценные блюда.</p>
+  <p>
+    Cozy Chapter — это уютная кофейня для тех, кто любит читать, пить кофе,
+    пробовать десерты, встречаться с друзьями и проводить время в спокойной атмосфере.
+    У нас можно посидеть одному, прийти компанией, поработать за ноутбуком
+    или присоединиться к книжному клубу.
+  </p>
+
+  <div class="features">
+    <div class="feature">📚<br><b>Книги и атмосфера</b></div>
+    <div class="feature">☕<br><b>Кофе и десерты</b></div>
+    <div class="feature">🔌<br><b>Розетки у мест</b></div>
+    <div class="feature">📶<br><b>Wi-Fi для гостей</b></div>
+  </div>
 </section>
 
 <section>
   <h2>Наши пространства</h2>
+
   <div class="cards">
     <div class="card">
       <img src="product1.jpg" alt="Зона для чтения">
-      <div><h3>Зона для чтения</h3><p>Уютные кресла, столики, розетки и спокойная атмосфера.</p></div>
+      <div>
+        <h3>Зона для чтения</h3>
+        <p>Мягкие кресла, маленькие столики, пледы, розетки рядом и спокойная атмосфера.</p>
+      </div>
     </div>
+
     <div class="card">
       <img src="product2.jpg" alt="Книжный клуб">
-      <div><h3>Книжный клуб</h3><p>Бесплатный отдельный зал для встреч клуба, организованного кафе.</p></div>
+      <div>
+        <h3>Книжный клуб</h3>
+        <p>Встречи, обсуждение книг и отдельный зал бесплатно для участников клуба.</p>
+      </div>
     </div>
+
     <div class="card">
-      <img src="product3.jpg" alt="Гамаки">
-      <div><h3>Гамаки и качели</h3><p>Места для тех, кто хочет читать максимально комфортно.</p></div>
+      <img src="product3.jpg" alt="Гамаки и качели">
+      <div>
+        <h3>Гамаки и качели</h3>
+        <p>Уютные места для тех, кто хочет читать максимально комфортно.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="booking" class="white-box">
+  <h2>Бронирование и время пребывания</h2>
+
+  <p>
+    При заказе любой позиции меню один гость может бесплатно пользоваться местом
+    в кафе <b>2 часа</b>.
+  </p>
+
+  <br>
+
+  <p>
+    Если хочется остаться дольше, можно выбрать один из вариантов:
+  </p>
+
+  <ul>
+    <li><b>Продление на 1 час</b> — 150₽</li>
+    <li><b>Продление на 3 часа</b> — 350₽</li>
+    <li><b>Безлимит до закрытия</b> — 500₽</li>
+    <li>
+      <b>Полноценный обед</b> — закажите 3 позиции из меню, и время продлится ещё на 90 минут бесплатно
+    </li>
+  </ul>
+
+  <br>
+
+  <p>
+    Забронировать можно кресло, столик, место в зоне с гамаками
+    или отдельную комнату для компании.
+  </p>
+</section>
+
+<section>
+  <h2>Отдельные комнаты для компаний</h2>
+
+  <div class="two-cards">
+    <div class="card">
+      <img src="room1.jpg" alt="Большой зал">
+      <div>
+        <h3>Большой зал</h3>
+        <p>Подходит для встреч, праздников, настольных игр, мастер-классов и больших компаний.</p>
+        <p><b>Аренда: от 800₽/час</b></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="room2.jpg" alt="Уютная комната">
+      <div>
+        <h3>Уютная комната</h3>
+        <p>Небольшое пространство для спокойных встреч, разговоров и уютных вечеров.</p>
+        <p><b>Аренда: от 500₽/час</b></p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="box">
-  <h2>Бронирование мест</h2>
-  <p>Можно забронировать кресло, столик, место в зоне с гамаками или отдельную комнату для компании. Для книжного клуба зал бесплатный, а для больших компаний доступна аренда помещений.</p>
-  <p><b>Правило:</b> при заказе любой позиции меню одно место бесплатно на 2 часа. Потом можно продлить время за небольшую плату.</p>
+  <h2>Книжный шкаф-сюрприз</h2>
+
+  <p>
+    В Cozy Chapter есть особенный книжный шкаф, где гости могут обмениваться книгами.
+    Это как «свидание вслепую» с книгой: обложку не видно, но есть хэштеги и короткая рецензия.
+  </p>
+
+  <img src="bookswap.jpg" alt="Книжный шкаф-сюрприз" class="big-image">
+
+  <h3>Как это работает?</h3>
+
+  <ul>
+    <li>Принеси книгу, которой хочешь поделиться.</li>
+    <li>Сотрудники кафе дадут непрозрачную бумагу.</li>
+    <li>Упакуй книгу так, чтобы не было видно обложку.</li>
+    <li>Напиши хэштеги, которые описывают настроение книги.</li>
+    <li>Можешь оставить короткую рецензию без спойлеров.</li>
+    <li>Поставь книгу на полку и выбери себе другую.</li>
+  </ul>
+
+  <br>
+
+  <p>
+    Примеры хэштегов:
+    <b>#уют #детектив #лето #романтика #магия #дружба #тайны #приключения</b>
+  </p>
 </section>
 
 <section>
   <h2>Отзывы гостей</h2>
+
   <div class="reviews">
     <div class="review">“Очень уютно, можно спокойно читать и пить кофе.”<br><b>— Алина</b></div>
     <div class="review">“Книжный клуб — лучшая идея. Атмосфера невероятная.”<br><b>— Марк</b></div>
     <div class="review">“Бронировали комнату для компании, всё было удобно.”<br><b>— София</b></div>
+    <div class="review">“Пришла на час, а в итоге осталась почти до закрытия.”<br><b>— Лиза</b></div>
+    <div class="review">“Очень понравился шкаф-сюрприз. Взяла книгу по хэштегам и не пожалела.”<br><b>— Даша</b></div>
+    <div class="review">“Тут удобно и читать, и работать. Розетки рядом — спасение.”<br><b>— Никита</b></div>
+    <div class="review">“Гамаки — это просто любовь. Самое необычное кафе в городе.”<br><b>— Полина</b></div>
+    <div class="review">“После трёх позиций из меню продлили время, и мы спокойно досидели встречу.”<br><b>— Артём</b></div>
+    <div class="review">“Красивое место, вкусный раф и очень тёплая атмосфера.”<br><b>— Мила</b></div>
   </div>
+</section>
+
+<section class="white-box">
+  <h2>Меню и формат “с собой”</h2>
+
+  <p>
+    В меню есть кофе, матча, чай, летние лимонады, десерты, круассаны,
+    тосты, супы и лёгкие горячие блюда.
+  </p>
+
+  <br>
+
+  <p>
+    Почти любую позицию можно взять с собой. На напитки и десерты с собой действует скидка 10%.
+  </p>
+
+  <a href="menu.html" class="btn">Перейти в меню</a>
 </section>
 
 <section id="contacts" class="contacts">
   <h2>Контакты</h2>
+  <p>Свяжитесь с нами или забронируйте место:</p>
+
   <a href="https://t.me/cozychapter" target="_blank">Telegram</a>
   <a href="https://instagram.com/cozychapter" target="_blank">Instagram</a>
   <a href="https://vk.com/cozychapter" target="_blank">VK</a>
   <a href="mailto:hello@cozychapter.ru">Email</a>
 </section>
 
-<footer>© 2026 Cozy Chapter</footer>
+<footer>
+  <p>© 2025 Cozy Chapter. Coffee. Books. Stories.</p>
+</footer>
 
 </body>
 </html>
