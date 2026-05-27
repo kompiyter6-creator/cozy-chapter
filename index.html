@@ -1,1 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cozy Chapter</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8f0;
+      color: #3b2a22;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(45, 28, 18, 0.55), rgba(45, 28, 18, 0.65)),
+        url("hero.jpg") center/cover no-repeat;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 40px 8%;
+    }
+
+    .hero {
+      max-width: 650px;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d4a373;
+      color: #2f1f18;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 25px;
+      color: #4b352a;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .card div {
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #6f4e37;
+    }
+
+    .about, .rules {
+      background: #f5e6ca;
+      border-radius: 28px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-top: 15px;
+    }
+
+    .contacts a {
+      display: inline-block;
+      margin: 8px 12px 8px 0;
+      color: white;
+      background: #6f4e37;
+      padding: 12px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #4b352a;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 800px) {
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 19px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hero">
+      <h1>Cozy Chapter</h1>
+      <p>Место, где кофе встречается с историями.</p>
+      <a href="#contacts" class="btn">Посетить кафе</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>О нашем кафе</h2>
+    <p>
+      Cozy Chapter — это книжная кофейня для тех, кто любит читать,
+      пить хороший кофе, пробовать десерты и проводить время в уютной атмосфере.
+      У нас можно посидеть одному, прийти с друзьями или присоединиться к книжному клубу.
+    </p>
+  </section>
+
+  <section>
+    <h2>Наши пространства</h2>
+
+    <div class="cards">
+      <div class="card">
+        <img src="product1.jpg" alt="Зона для чтения">
+        <div>
+          <h3>Зона для чтения</h3>
+          <p>Мягкие кресла, маленькие столики, розетки рядом и спокойная атмосфера.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="product2.jpg" alt="Книжный клуб">
+        <div>
+          <h3>Книжный клуб</h3>
+          <p>Встречи, обсуждение книг и отдельный зал бесплатно для участников клуба.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="product3.jpg" alt="Гамаки и качели">
+        <div>
+          <h3>Гамаки и качели</h3>
+          <p>Уютные места для тех, кто хочет читать максимально комфортно.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="rules">
+    <h2>Правила комфортного пространства</h2>
+    <p>
+      При заказе любой позиции меню один гость может бесплатно пользоваться местом до 2 часов.
+      После этого время можно продлить за небольшую плату.
+    </p>
+    <ul>
+      <li>Wi-Fi доступен для гостей кафе.</li>
+      <li>Розетки есть рядом с местами для чтения.</li>
+      <li>Для книжного клуба отдельный зал бесплатный.</li>
+      <li>Для больших компаний доступна аренда отдельных комнат.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Меню и атмосфера</h2>
+    <p>
+      У нас можно заказать кофе, чай, десерты, круассаны, лёгкие закуски
+      и полноценные блюда, если вы проголодались.
+    </p>
+  </section>
+
+  <section id="contacts" class="contacts">
+    <h2>Контакты</h2>
+    <p>Свяжитесь с нами или забронируйте место:</p>
+
+    <a href="https://t.me/cozychapter" target="_blank">Telegram</a>
+    <a href="https://instagram.com/cozychapter" target="_blank">Instagram</a>
+    <a href="https://vk.com/cozychapter" target="_blank">VK</a>
+    <a href="mailto:hello@cozychapter.ru">Email</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Cozy Chapter. Coffee. Books. Stories.</p>
+  </footer>
+
+</body>
+</html>
